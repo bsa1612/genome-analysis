@@ -1,0 +1,55 @@
+---
+title: "Silva_Lab 3"
+author: "Sam Silva"
+date: "2/5/2020"
+output:
+  html_document: default
+  pdf_document: default
+---
+```{r}
+library(tidyverse)
+SNPs<- read.table("23andMe_complete.txt", header = TRUE, sep = "\t")
+```
+
+```{r}
+### Exercise 1
+ggplot(SNPs, aes(chromosome))+
+geom_bar()
+```
+
+```{r}
+### Excercise 2
+SNPs$chromosome = ordered(SNPs$chromosome, levels=c(seq(1,22), "X","Y","MT"))
+summary(SNPs$chromosome)
+```
+
+```{r}
+### Excercise 3
+ggplot(SNPs, aes(chromosome, fill = genotype))+
+geom_bar()
+```
+
+```{r}
+### Excercise 4
+ggplot(SNPs, aes(chromosome, fill = genotype))+
+geom_bar(position="fill")
+```
+
+```{r}
+### Excercise 5
+ggplot(SNPs, aes(chromosome, fill = genotype))+
+geom_bar(position="dodge2")
+```
+
+```{r}
+### Excercise 6
+ggplot(SNPs, aes(chromosome, fill = genotype))+
+geom_bar(position="dodge2")+
+facet_wrap(~genotype)
+```
+
+
+
+
+
+
