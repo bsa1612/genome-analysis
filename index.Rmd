@@ -10,7 +10,7 @@ Application written in R [@RCoreTeam] using the Shiny framework [@Chang2015].
 
 [Lab3](Lab3_SamSilva.html)
 
-[Lab4](lab-4_Sam-Silva.html)
+[Lab4](Lab-4_Sam-Silva.html)
 
 [Lab5](Lab-5.html)
 
