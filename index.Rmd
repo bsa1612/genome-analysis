@@ -1,9 +1,8 @@
 ---
-title: "Human Genomics Analysis"
-author: "Sam Silva"
-date: "2/26/2020"
+title: "Human Genome Analysis"
+author: "Sam SIlva"
+date: "3/4/2020"
 output: html_document
-bibliography: bibliography.bib
 ---
 
 Application written in R [@RCoreTeam] using the Shiny framework [@Chang2015].
@@ -16,5 +15,4 @@ Application written in R [@RCoreTeam] using the Shiny framework [@Chang2015].
 
 
 # REFERENCES
-
 
