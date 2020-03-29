@@ -1,0 +1,52 @@
+---
+title: "Lab9"
+author: "Sam Silva"
+date: "3/25/2020"
+output: html_document
+---
+
+```{r}
+library(tidyverse)
+library(lubridate)
+```
+
+```{r}
+report_03_11_2020 <-   read_csv(url("https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_daily_reports/03-11-2020.csv")) %>%
+  rename(Country.Region = "Country/Region", Province.State = "Province/State")
+
+```
+
+
+```{r}
+report_03_11_2020 %>% 
+  group_by(Province.State) %>% 
+  filter(Country.Region == "US")%>%
+   ggplot(aes(x = Deaths,  y = reorder(Province.State, Confirmed))) + 
+    geom_point() +
+    ggtitle("Deaths for each US State") +
+    ylab("States with Confirmed Cases") +
+    xlab("Deaths")
+```
+
+```{r}
+report_03_11_2020 %>% 
+  group_by(Country.Region)%>%
+  select(Confirmed, Recovered)%>%
+  arrange(desc(Recovered))%>%
+  filter(Recovered >200)
+ 
+```
+
+```{r}
+report_03_11_2020 %>% 
+  filter(Country.Region %in% c("China","Iran","Italy","Korea, South","Spain","Japan","US"))%>%
+  ggplot(aes(x=Recovered, y= reorder(Country.Region, Recovered)))+
+  geom_point()+
+  ggtitle("Recovered cases")+
+  xlab("Recovered")+
+  ylab("Country")
+ 
+ ```
+
+
+
