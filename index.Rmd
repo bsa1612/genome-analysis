@@ -1,0 +1,20 @@
+---
+title: "Human Genome Analysis"
+author: "Sam SIlva"
+date: "3/4/2020"
+output: html_document
+---
+
+Application written in R [@RCoreTeam] using the Shiny framework [@Chang2015].
+
+[Lab3](Lab3_SamSilva.html)
+
+[Lab4](Lab-4_Sam-Silva.html)
+
+[Lab5](Lab-5.html)
+
+[Lab9](Lab9.html)
+
+
+# REFERENCES
+
